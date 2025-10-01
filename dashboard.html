@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - ZOKKO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Bienvenido a ZOKKO</h1>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="marketplace.html">Marketplace</a>
+        <a href="tutorial.html">Tutorial</a>
+      </nav>
+    </header>
+    <div class="user-info">
+      <span id="userName">Usuario</span>
+      <button class="btn btn-logout" id="logoutBtn">Salir</button>
+    </div>
+    <main>
+      <div class="balance-card">
+        <h2>TU BALANCE</h2>
+        <div class="balance-value" id="balance-value">600</div>
+        <div class="balance-currency" id="balance-currency">= $60.00 MXN</div>
+        <div class="balance-actions">
+          <button class="btn btn-cta" onclick="retirarGanancias()">Retirar ganancias</button>
+          <button class="btn btn-primary" onclick="location.href='marketplace.html'">Comprar artículos</button>
+        </div>
+        <div class="balance-icon">
+          <img src="assets/wallet.png" alt="Billetera" class="wallet-icon">
+        </div>
+      </div>
+<!-- Stats -->
+<div class="stats-row">
+  <div class="stat-item">
+    <div class="stat-icon">🔥</div>
+    <div class="stat-content">
+      <div class="stat-value" id="streakCount">1</div>
+      <div class="stat-label">Días seguidos</div>
+    </div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-icon">👥</div>
+    <div class="stat-content">
+      <div class="stat-value" id="refCountMini">0</div>
+      <div class="stat-label">Referidos</div>
+    </div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-icon">🔄</div>
+    <div class="stat-content">
+      <div class="stat-value" id="activeBuys">0</div>
+      <div class="stat-label">Activos</div>
+    </div>
+  </div>
+</div>
+<!-- Fila 1 -->
+<div class="product-row">
+  <div class="product-card">
+    <img src="assets/products/zapatilla.png" alt="Zapatilla Retro NFT" class="product-image">
+    <h4>Zapatilla Retro NFT</h4>
+    <p>10 pts $1.00 MXN</p>
+    <button class="btn btn-primary">Comprar</button>
+  </div>
+
+  <div class="product-card">
+    <img src="assets/products/reloj.png" alt="Reloj Neon Pulse NFT" class="product-image">
+    <h4>Reloj Neon Pulse NFT</h4>
+    <p>17 pts $1.70 MXN</p>
+    <button class="btn btn-primary">Comprar</button>
+  </div>
+
+  <div class="product-card">
+    <img src="assets/products/nft-dorado.png" alt="NFT Dorado" class="product-image">
+    <h4>NFT Dorado</h4>
+    <p>27 pts $2.70 MXN</p>
+    <button class="btn btn-primary">Comprar</button>
+  </div>
+
+  <div class="product-card">
+    <img src="assets/products/laptop.png" alt="Laptop Espacial NFT" class="product-image">
+    <h4>Laptop Espacial NFT</h4>
+    <p>40 pts $4.00 MXN</p>
+    <button class="btn btn-primary">Comprar</button>
+  </div>
+</div>
+
+<!-- Fila 2 -->
+<div class="product-row">
+  <div class="product-card">
+    <img src="assets/products/smartphone.png" alt="Smartphone Virtual NFT" class="product-image">
+    <h4>Smartphone Virtual NFT</h4>
+    <p>55 pts $5.50 MXN</p>
+    <button class="btn btn-primary">Comprar</button>
+  </div>
+
+  <div class="product-card">
+    <img src="assets/products/coleccion-mistica.png" alt="Colección Mística Pack" class="product-image">
+    <h4>Colección Mística Pack</h4>
+    <p>70 pts $7.00 MXN</p>
+    <button class="btn btn-primary">Comprar</button>
+  </div>
+
+  <div class="product-card">
+    <img src="assets/products/rareza-suprema.png" alt="Rareza Suprema NFT legendario" class="product-image">
+    <h4>Rareza Suprema NFT</h4>
+    <p>105 pts $10.50 MXN</p>
+    <button class="btn btn-primary">Comprar</button>
+  </div>
+
+  <div class="product-card">
+    <img src="assets/products/cofre-bronceado.png" alt="Cofre Bronceado" class="product-image">
+    <h4>Cofre Bronceado</h4>
+    <p>20 pts $2.00 MXN</p>
+    <button class="btn btn-primary">Comprar</button>
+  </div>
+</div>
+
+<!-- Fila 3 -->
+<div class="product-row">
+  <div class="product-card">
+    <img src="assets/products/cofre-plateado.png" alt="Cofre Plateado" class="product-image">
+    <h4>Cofre Plateado</h4>
+    <p>40 pts $4.00 MXN</p>
+    <button class="btn btn-primary">Comprar</button>
+  </div>
+
+  <div class="product-card">
+    <img src="assets/products/cofre-dorado.png" alt="Cofre Dorado" class="product-image">
+    <h4>Cofre Dorado</h4>
+    <p>80 pts $8.00 MXN</p>
+    <button class="btn btn-primary">Comprar</button>
+  </div>
+
+  <div class="product-card">
+    <img src="assets/products/avatar-holografico.png" alt="Avatar Holográfico" class="product-image">
+    <h4>Avatar Holográfico</h4>
+    <p>35 pts $3.50 MXN</p>
+    <button class="btn btn-primary">Comprar</button>
+  </div>
+
+  <div class="product-card">
+    <img src="assets/products/espada-fantasma.png" alt="Espada Fantasma" class="product-image">
+    <h4>Espada Fantasma</h4>
+    <p>50 pts $5.00 MXN</p>
+    <button class="btn btn-primary">Comprar</button>
+  </div>
+</div>
+
+<!-- Fila 4 -->
+<div class="product-row">
+  <div class="product-card">
+    <img src="assets/products/cofre-misterioso.png" alt="Cofre Misterioso" class="product-image">
+    <h4>Cofre Misterioso</h4>
+    <p>50 pts $5.00 MXN</p>
+    <button class="btn btn-primary">Comprar</button>
+  </div>
+
+  <div class="product-card">
+    <img src="assets/products/cristal-evolutivo.png" alt="Cristal Evolutivo" class="product-image">
+    <h4>Cristal Evolutivo</h4>
+    <p>23 pts $2.30 MXN</p>
+    <button class="btn btn-primary">Comprar</button>
+  </div>
+
+  <div class="product-card">
+    <img src="assets/products/caja-energia.png" alt="Caja de Energía" class="product-image">
+    <h4>Caja de Energía</h4>
+    <p>30 pts $3.00 MXN</p>
+    <button class="btn btn-primary">Comprar</button>
+  </div>
+
+  <div class="product-card">
+    <img src="assets/products/totem-caos.png" alt="Tótem del Caos" class="product-image">
+    <h4>Tótem del Caos</h4>
+    <p>60 pts $6.00 MXN</p>
+    <button class="btn btn-primary">Comprar</button>
+  </div>
+</div>
+<!-- Tus Planes -->
+<section class="plans-section">
+  <h3>Tus Planes</h3>
+
+  <!-- Sin plan activo -->
+  <div class="plan-card" style="background: #1a222b; padding: 20px; border-radius: 12px; margin-bottom: 20px;">
+    <h4>Sin plan activo</h4>
+    <p>Usa tu prueba gratuita o compra un plan.</p>
+  </div>
+
+  <!-- Fila 1: Impulso y Plata -->
+  <div class="plan-row">
+    <div class="plan-card">
+      <img src="assets/plans/plan-impulso.png" alt="Plan Impulso" class="plan-image">
+      <h4>Impulso</h4>
+      <p>5,000 pts ≈ $500.00 MXN</p>
+      <ul>
+        <li>Genera 5,000 pts</li>
+        <li>Activo 3 semanas</li>
+        <li>Compras sugeridas: 126</li>
+        <li>Después: espera 1 mes o subir</li>
+      </ul>
+      <button class="btn btn-cta" onclick="elegirPlan('Impulso', 5000, 500)">Elegir plan</button>
+    </div>
+
+    <div class="plan-card">
+      <img src="assets/plans/plan-plata.png" alt="Plan Plata" class="plan-image">
+      <h4>Plata</h4>
+      <p>25,000 pts ≈ $2,500.00 MXN</p>
+      <ul>
+        <li>Genera 25,000 pts</li>
+        <li>Activo 2 semanas</li>
+      </ul>
+      <button class="btn btn-cta" onclick="elegirPlan('Plata', 25000, 2500)">Elegir plan</button>
+    </div>
+  </div>
+
+  <!-- Fila 2: Oro y Platino -->
+  <div class="plan-row">
+    <div class="plan-card">
+      <img src="assets/plans/plan-oro.png" alt="Plan Oro" class="plan-image">
+      <h4>Oro</h4>
+      <p>100,000 pts ≈ $10,000.00 MXN</p>
+      <ul>
+        <li>Genera 100,000 pts</li>
+        <li>Activo 2 semanas</li>
+      </ul>
+     <button class="btn btn-cta" onclick="elegirPlan('Oro', 100000, 10000)">Elegir plan</button>
+    </div>
+
+    <div class="plan-card">
+      <img src="assets/plans/plan-platino.png" alt="Plan Platino" class="plan-image">
+      <h4>Platino</h4>
+      <p>300,000 pts ≈ $30,000.00 MXN</p>
+      <ul>
+        <li>Genera 300,000 pts</li>
+        <li>Activo 2 semanas</li>
+      </ul>
+      <button class="btn btn-cta" onclick="elegirPlan('Platino', 300000, 30000)">Elegir plan</button>
+    </div>
+  </div>
+
+  <!-- Fila 3: Diamante y Titán -->
+  <div class="plan-row">
+    <div class="plan-card">
+      <img src="assets/plans/plan-diamante.png" alt="Plan Diamante" class="plan-image">
+      <h4>Diamante</h4>
+      <p>800,000 pts ≈ $80,000.00 MXN</p>
+      <ul>
+        <li>Genera 800,000 pts</li>
+        <li>Activo 2 semanas</li>
+      </ul>
+      <button class="btn btn-cta" onclick="elegirPlan('Diamante', 800000, 80000)">Elegir plan</button>
+    </div>
+
+    <div class="plan-card">
+      <img src="assets/plans/plan-titan.png" alt="Plan Titán" class="plan-image">
+      <h4>Titán</h4>
+      <p>3,000,000 pts ≈ $300,000.00 MXN</p>
+      <ul>
+        <li>Genera 3,000,000 pts</li>
+        <li>Activo 2 semanas</li>
+      </ul>
+      <button class="btn btn-cta" onclick="elegirPlan('Titán', 3000000, 300000)">Elegir plan</button>
+    </div>
+  </div>
+
+  <!-- Fila 4: Leyenda -->
+  <div class="plan-row">
+    <div class="plan-card">
+      <img src="assets/plans/plan-leyenda.png" alt="Plan Leyenda" class="plan-image">
+      <h4>Leyenda</h4>
+      <p>9,000,000 pts ≈ $900,000.00 MXN</p>
+      <ul>
+        <li>Genera 9,000,000 pts</li>
+        <li>Activo 2 semanas</li>
+        <li>Plan final</li>
+      </ul>
+     <button class="btn btn-cta" onclick="elegirPlan('Leyenda', 9000000, 900000)">Elegir plan</button>
+    </div>
+  </div>
+</section>
+
+  <script src="script.js"></script>
+</body>
+</html>

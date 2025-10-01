@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorial — ZOKKO</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .tutorial-screen { display: none; padding: 40px 20px; text-align: center; max-width: 600px; margin: 0 auto; }
+    .tutorial-screen.active { display: block; }
+    .tutorial-screen h2 { font-size: 24px; margin: 20px 0; }
+    .tutorial-screen p { line-height: 1.6; margin: 15px 0; color: var(--muted); }
+    .tutorial-nav { display: flex; justify-content: space-between; margin-top: 30px; }
+    .progress-dots { display: flex; justify-content: center; gap: 8px; margin: 20px 0; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border); }
+    .dot.active { background: var(--pri); }
+  </style>
+</head>
+<body style="background: var(--bg);">
+  <div class="container" style="padding: 20px 0;">
+    <div class="tutorial-screen active" data-step="1">
+      <h2>🧠 ¿Qué es ZOKKO?</h2>
+      <p>ZOKKO es una página web donde ganas dinero real simplemente interactuando con artículos virtuales en un marketplace. En un sistema de compra y reventa 100% virtual, sin riesgo, y donde las ventas se hacen de manera automatizada por la misma web de ZOKKO.</p>
+      <p><strong>✅ ZOKKO genera ingresos porque monetiza tu interacción:</strong> cada clic, cada sesión, cada participación activa nos permite obtener ingresos por estadísticas de uso, engagement y comportamiento del mercado.</p>
+      <p>Lo único que necesitas es entrar cada día, seguir tu racha, y divertirte con los cofres, NFTs y recompensas.</p>
+    </div>
+    <div class="tutorial-screen" data-step="2">
+      <h2>💰 ¿Cómo ganas dinero?</h2>
+      <p>En ZOKKO todo funciona con puntos.<br><strong>1 punto = $0.10 MXN.</strong></p>
+      <p>Solo sigue estos pasos:</p>
+      <ol style="text-align: left; margin: 15px auto; max-width: 400px;">
+        <li>Compra artículos con tus puntos disponibles</li>
+        <li>Espera el tiempo asignado (5 min, 1 hr, etc.)</li>
+        <li>La app revende el artículo por ti (automáticamente)</li>
+        <li>Ganas puntos → se convierten en dinero real 💵</li>
+      </ol>
+      <p>Tus ganancias siempre son seguras, programadas y visibles desde el panel principal.</p>
+    </div>
+    <div class="tutorial-screen" data-step="3">
+      <h2>🎁 ¿Qué es la prueba gratuita?</h2>
+      <p><strong>¡Comienza gratis, gana sin invertir!</strong></p>
+      <p>ZOKKO te regala <strong>14 días de prueba gratuita</strong> para que puedas conocer y usar la app sin pagar nada.</p>
+      <p>Durante este período puedes:</p>
+      <ul style="text-align: left; margin: 15px auto; max-width: 400px;">
+        <li>✅ Realizar hasta 5 compras virtuales por día</li>
+        <li>✅ Ganar Dinero Real</li>
+        <li>✅ Familiarizarte con el sistema de forma segura</li>
+      </ul>
+      <p><strong>¿Qué pasa cuando termina la prueba?</strong><br>Tienes dos opciones:<br>
+        • Esperar 30 días y continuar en el plan gratuito mensual<br>
+        • O comprar un plan para seguir generando ingresos al instante</p>
+      <p>¿Cuándo puedes retirar tus ganancias?<br>Puedes hacer retiros semanales siempre que alcances el mínimo de retiro.<br>¡Tú controlas tu tiempo y tu dinero!</p>
+    </div>
+    <div class="tutorial-screen" data-step="4">
+      <h2>📦 ¿Cómo comprar un plan?</h2>
+      <p><strong>Sube de nivel con los planes ZOKKO</strong></p>
+      <p>Si quieres seguir ganando después de la prueba, puedes comprar uno de nuestros planes escalables.</p>
+      <p><strong>👉 Cada plan:</strong></p>
+      <ul style="text-align: left; margin: 15px auto; max-width: 400px;">
+        <li>Tiene un precio fijo</li>
+        <li>Te da ganancias exactas</li>
+        <li>Tiene artículos asignados por orden</li>
+        <li>¡No hay riesgo ni sorpresas!</li>
+      </ul>
+      <p><strong>💳 Puedes pagar por Binance o SPEI</strong> y enviar el comprobante por WhatsApp para activarlo en minutos.</p>
+    </div>
+    <div class="tutorial-screen" data-step="5">
+      <h2>🔐 Seguridad y soporte</h2>
+      <p><strong>Nos tomamos tu confianza en serio.</strong></p>
+      <ul style="text-align: left; margin: 15px auto; max-width: 400px;">
+        <li>✅ Cada cuenta está protegida con seguridad avanzada</li>
+        <li>✅ Control de IP y actividad sospechosa</li>
+        <li>✅ No pedimos datos bancarios ni sensibles</li>
+      </ul>
+      <p><strong>📲 ¿Dudas o problemas?</strong><br>Nuestro equipo de soporte te atiende por WhatsApp todos los días.</p>
+      <p>ZOKKO está diseñada para que ganes, disfrutes y evoluciones a tu ritmo.</p>
+    </div>
+    <div class="tutorial-screen" data-step="6">
+      <h2>✅ ¡Listo para empezar!</h2>
+      <p>Ahora conoces cómo funciona ZOKKO.</p>
+      <p>Recuerda:</p>
+      <ul style="text-align: left; margin: 15px auto; max-width: 400px;">
+        <li>Ingresa diario para mantener tu racha</li>
+        <li>Invita amigos y gana comisiones</li>
+        <li>Sube de nivel con planes escalables</li>
+      </ul>
+      <button id="finishTutorial" class="btn btn-cta" style="margin-top:20px;">ENTENDIDO, EMPEZAR</button>
+    </div>
+
+    <div class="progress-dots" id="progressDots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <div class="tutorial-nav">
+      <button id="prevBtn" class="btn" disabled>← Anterior</button>
+      <button id="nextBtn" class="btn">Siguiente →</button>
+    </div>
+  </div>
+
+  <script>
+    let currentStep = 1;
+    const totalSteps = 6;
+
+    function showStep(step) {
+      document.querySelectorAll('.tutorial-screen').forEach(el => el.classList.remove('active'));
+      document.querySelector(`.tutorial-screen[data-step="${step}"]`).classList.add('active');
+      
+      document.querySelectorAll('.dot').forEach((el, i) => {
+        el.classList.toggle('active', i === step - 1);
+      });
+
+      document.getElementById('prevBtn').disabled = (step === 1);
+      document.getElementById('nextBtn').textContent = (step === totalSteps) ? 'Finalizar' : 'Siguiente →';
+    }
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      if (currentStep < totalSteps) {
+        currentStep++;
+        showStep(currentStep);
+      } else {
+        localStorage.setItem('zokko_tutorial_done', '1');
+        window.location.href = 'dashboard.html';
+      }
+    });
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      if (currentStep > 1) {
+        currentStep--;
+        showStep(currentStep);
+      }
+    });
+
+    document.getElementById('finishTutorial')?.addEventListener('click', () => {
+      localStorage.setItem('zokko_tutorial_done', '1');
+      window.location.href = 'dashboard.html';
+    });
+
+    if (localStorage.getItem('zokko_tutorial_done')) {
+      window.location.href = 'dashboard.html';
+    }
+  </script>
+</body>
+</html>

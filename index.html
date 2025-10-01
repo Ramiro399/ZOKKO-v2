@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZOKKO — Gana dinero real desde tu celular</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a href="index.html" class="brand">
+        <div class="spark"></div>
+        <span>ZOKKO</span>
+      </a>
+      <nav class="menu">
+        <a href="#login" id="btnEntrar" class="btn">Entrar</a>
+        <a href="#signup" id="btnSignup" class="btn btn-cta">Registrarse</a>
+        <a href="#" id="btnLogout" hidden>Cerrar sesión</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="logo-large">
+        <div class="spark-logo"></div>
+        <h1>ZOKKO</h1>
+      </div>
+      <h2 class="hero-title">🧠 Bienvenido a ZOKKO</h2>
+      <p class="hero-subtitle">Tu nueva fuente de ingresos desde el celular. Gana dinero real interactuando con artículos virtuales en un marketplace gamificado.</p>
+      <div class="hero_actions">
+        <a href="register.html" class="btn btn-cta btn-lg">¡Empieza gratis!</a>
+        <a href="login.html" class="btn btn-ghost btn-lg">Ya tengo cuenta</a>
+      </div>
+     <!-- Video Promocional -->
+<div class="video-container">
+  <video autoplay muted loop playsinline class="promo-video">
+    <source src="videos/promo-marketplace.mp4" type="video/mp4">
+    Tu navegador no soporta el elemento de video.
+  </video>
+</div>
+      <div class="divider"></div>
+      <footer class="sitefoot">
+        <p>© 2025 ZOKKO. Plataforma gamificada de interacción virtual. No es criptomoneda ni inversión financiera.</p>
+      </footer>
+    </div>
+  </section>
+
+  <div id="authModal" class="auth-overlay" hidden>
+    <div class="auth-card">
+      <button id="authClose" class="btn-ghost" style="position:absolute;right:12px;top:12px;padding:4px 8px;">✕</button>
+      <div class="auth-tabs">
+        <button id="tabLogin" class="auth-tab active">Entrar</button>
+        <button id="tabSignup" class="auth-tab">Registrarse</button>
+      </div>
+      <div class="auth-body">
+        <form id="formLogin" hidden>
+          <div class="fld">
+            <label>Email</label>
+            <input type="email" id="loginEmail" required placeholder="tu@email.com" />
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;margin-top:12px;">Entrar</button>
+        </form>
+        <form id="formSignup">
+          <div class="fld">
+            <label>Nombre</label>
+            <input type="text" id="suName" required placeholder="Ej: Ana" maxlength="20" />
+          </div>
+          <div class="fld">
+            <label>Email</label>
+            <input type="email" id="suEmail" required placeholder="tu@email.com" />
+          </div>
+          <button type="submit" class="btn btn-cta" style="width:100%;margin-top:12px;">Crear cuenta</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
